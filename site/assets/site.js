@@ -1,0 +1,2 @@
+(function(){var t=new Date();t.setHours(0,0,0,0);document.querySelectorAll('[data-days]').forEach(function(el){var n=Math.round((new Date(el.getAttribute('data-days')+'T00:00:00')-t)/864e5);
+if(n>=0){el.innerHTML=n+'<i>'+(n===1?'day':'days')+' left</i>';el.setAttribute('aria-label',n+' days left')}else{el.textContent='Ended'}});})();
